@@ -34,18 +34,21 @@ import './index.css';
 
 //  4 React Components : Collections of React elements that we can use to build user interfaces
 
-
-function Hello(props) {
-  return (
+function Lake(props) {
+  return(
+  <h1>{props.name}</h1>
+  )
+}
+function App() {
+  return(
     <div>
-      <h1>Welcome to {props.library}!</h1>
-  <p>{props.message}</p>
-  <p>{Object.keys(props).length} Props Total</p>
+      <Lake name="Lake Tahoe"/>
+      <Lake name="Angora Lake"/>
     </div>
   )
-} 
+}
 
 ReactDOM.render(
-  <Hello library="React" message="Have fun!" number={7}/>, 
+  <App />, 
   document.getElementById("root")
 )
