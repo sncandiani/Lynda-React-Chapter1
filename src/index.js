@@ -32,18 +32,20 @@ import './index.css';
 // document.getElementById("root")
 // ); 
 
-//  4 React Components : Collections of React elements that we can use to build
+//  4 React Components : Collections of React elements that we can use to build user interfaces
 
-function Hello() {
+
+function Hello(props) {
   return (
     <div>
-      <h1>Hi!</h1>
-      <p>Welcome to React!</p>
+      <h1>Welcome to {props.library}!</h1>
+  <p>{props.message}</p>
+  <p>{Object.keys(props).length} Props Total</p>
     </div>
   )
 } 
 
 ReactDOM.render(
-  <Hello />, 
+  <Hello library="React" message="Have fun!" number={7}/>, 
   document.getElementById("root")
 )
